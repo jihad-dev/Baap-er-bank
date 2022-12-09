@@ -1,25 +1,22 @@
-// step 1 //
 document.getElementById('btn-deposit').addEventListener('click',function(){
-
-// step 2 //
     const depositField = document.getElementById('deposit-field');
-    const newDepositAmountstring = depositField.value;
-    const newDepositAmount = parseFloat(newDepositAmountstring);
-     // step 3 //
-     const depositTotalElement = document.getElementById('deposit-total');
-     const previousDepositTotalstring = depositTotalElement.innerText;
-     const previousDepositTotal = parseFloat(previousDepositTotalstring);
-     const currentDepositTotal = previousDepositTotal + newDepositAmount;
-     depositTotalElement.innerText = currentDepositTotal;
+    const newdepositamountString = depositField.value;
+    const newdepositamount = parseFloat(newdepositamountString);
+    //
+    depositField.value = '';
+    //
+    const deposittotalElement = document.getElementById('deposit-total');
+    const previousdeposittotalstring = deposittotalElement.innerText;
+    const previousdeposittotal = parseFloat(previousdeposittotalstring);
+    //
+    const newdeposittotal = previousdeposittotal + newdepositamount;
+    deposittotalElement.innerText = newdeposittotal;
+    //
+    const balancetotalElement = document.getElementById('balance-total');
+    const previousbalancetotalString = balancetotalElement.innerText;
+    const previousTotalAmount = parseFloat(previousbalancetotalString);
+    //
+    const newbalanceTotal =previousTotalAmount + newdepositamount;
+    balancetotalElement.innerText = newbalanceTotal;
 
-    //  
-
-    const balanceTotalElement = document.getElementById('balance-total');
-    const previousbalanceTotalString = balanceTotalElement.innerText;
-    const previousbalanceTotal = parseFloat(previousbalanceTotalString);
-    // 
-    const currentbalanceTotal = previousbalanceTotal + newDepositAmount;
-    balanceTotalElement.innerText = currentbalanceTotal;
-     // step 7 //
-     depositField.value = '';
 })
