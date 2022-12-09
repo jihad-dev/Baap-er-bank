@@ -20,7 +20,7 @@
         </div>
         <div class="bg-yellow-500 rounded-xl mt-16">
             <h4 class="p-3 text-slate-50">Withdrow</h4>
-            <h2 class="mx-5 mb-4 text-3xl text-slate-50">$00</h2>
+            <h2 class="mx-5 mb-4 text-3xl text-slate-50">$<span id="total-withdrow">00</span></h2>
         </div>
         <div class="bg-violet-500 rounded-xl mt-16">
             <h4 class="p-3 text-slate-50">Balance</h4>
@@ -29,6 +29,8 @@
      
     </div>
 </section>
+
+
 <section class="mt-12">
     <div class="grid grid-cols-2 gap-x-10 w-9/12 mx-auto">
         <div class="bg-indigo-300 rounded-xl mt-16">
@@ -38,8 +40,8 @@
         </div>
         <div class="bg-purple-500 rounded-xl mt-16">
             <h4 class="p-3 text-slate-50"> Please Withdrow</h4>
-         <input class="block mx-3 mt-4 mb-5 w-7/12" type="text" placeholder="$amount you want to Withdrow">
-         <button class="mx-3 p-5 bg-green-400 mt-3 mb-3 rounded-xl py-2 hover:bg-yellow-400 ">Withdrow</button>
+         <input id="withdrow-field" class="block mx-3 mt-4 mb-5 w-7/12" type="text" placeholder="$amount you want to Withdrow">
+         <button id="btn-withdrow" class="mx-3 p-5 bg-green-400 mt-3 mb-3 rounded-xl py-2 hover:bg-yellow-400 ">Withdrow</button>
         </div>
         
      
@@ -47,5 +49,6 @@
 </section>
      </main>
      <script src="./js/deposit.js"></script>
+     <script src="./withdrow.js"></script>
 </body>
 </html>
